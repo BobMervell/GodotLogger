@@ -33,11 +33,11 @@ This plugin is autoloaded through GDScript.
 You can call the following functions from your script after enabling the plugin:
 
 ```gdscript
-LoggerAutoload.log_info("Something happened!", {"context": "player_spawn"})
-LoggerAutoload.log_debug("Debugging this weird behavior", {"velocity": Vector2(10, 5)})
-LoggerAutoload.log_warn("Something might go wrong", {"area": "UI"})
-LoggerAutoload.log_error("Something went wrong!", {"code": 403})
-LoggerAutoload.log_fatal("Critical crash", {"scene": "BattleArena"})
+Logger.log_info("Something happened!", {"context": "player_spawn"})
+Logger.log_debug("Debugging this weird behavior", {"velocity": Vector2(10, 5)})
+Logger.log_warn("Something might go wrong", {"area": "UI"})
+Logger.log_error("Something went wrong!", {"code": 403})
+Logger.log_fatal("Critical crash", {"scene": "BattleArena"})
 ```
 
 All log functions accept:
@@ -47,7 +47,7 @@ All log functions accept:
 ### 🧠 Log Output Example
 
 ```gdscript
-LoggerAutoload.log_info("Player connected", {"player_id": 42})
+Logger.log_info("Player connected", {"player_id": 42})
 ```
 
 Output in console:
