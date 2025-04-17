@@ -8,6 +8,13 @@ func _ready() -> void:
 	if err != OK:
 		return
 
+func log_trace(log_message: String, log_details: Dictionary = {}) -> void:
+	if config.get_value("LogSettings","log_info",true):
+		var error_type:String = "[b]TRACE:[/b] "
+		var output_text:String = format_log(log_message,log_details)
+
+		print_rich(error_type + output_text)
+
 func log_info(log_message: String, log_details: Dictionary = {}) -> void:
 	if config.get_value("LogSettings","log_info",true):
 		var error_type:String = "[b]INFO:[/b] "

@@ -4,7 +4,7 @@
 
 [node name="Logger" type="Control"]
 clip_contents = true
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(0, 175)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,6 +28,21 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="TraceLog" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HSplitContainer/VBoxContainer/TraceLog"]
+layout_mode = 2
+button_pressed = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HSplitContainer/VBoxContainer/TraceLog"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[b] Trace log"
+fit_content = true
 
 [node name="InfoLog" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/VBoxContainer"]
 layout_mode = 2
@@ -108,6 +123,7 @@ fit_content = true
 layout_mode = 2
 size_flags_horizontal = 3
 
+[connection signal="toggled" from="VBoxContainer/HSplitContainer/VBoxContainer/TraceLog/CheckBox" to="." method="_on_trace_check_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/HSplitContainer/VBoxContainer/InfoLog/CheckBox" to="." method="_on_info_check_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/HSplitContainer/VBoxContainer/DebugLog/CheckBox" to="." method="_on_debug_check_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/HSplitContainer/VBoxContainer/WarnLog/CheckBox" to="." method="_on_warn_check_box_toggled"]
