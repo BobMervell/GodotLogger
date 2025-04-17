@@ -3,7 +3,7 @@ extends EditorPlugin
 
 var dock:LoggerPanel
 const PANNEL_UI:PackedScene = preload("res://addons/Godot_logger/logger_pannel.tscn")
-const LOGGER_AUTOLOAD = "LoggerAutoload"
+const LOGGER_AUTOLOAD = "Logger"
 
 func _enter_tree() -> void:
 	dock = PANNEL_UI.instantiate()

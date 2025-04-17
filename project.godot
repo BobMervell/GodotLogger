@@ -14,10 +14,18 @@ config/name="GodotLogger"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LoggerAutoload="*res://addons/Godot_logger/logger_autoload.gd"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Godot_logger/plugin.cfg")
 
 [rendering]
 
