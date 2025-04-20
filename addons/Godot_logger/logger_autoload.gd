@@ -4,7 +4,7 @@ extends Node
 var config:ConfigFile = ConfigFile.new()
 
 func _ready() -> void:
-	var err = config.load("res://addons/Godot_logger/log_settings.cfg")
+	var err:Error = config.load("res://addons/Godot_logger/log_settings.cfg")
 	if err != OK:
 		return
 
@@ -54,7 +54,7 @@ func log_fatal(log_message: String, log_details: Dictionary = {}) -> void:
 		print_rich(error_type + output_text)
 
 func format_log(log_message: String, log_details: Dictionary = {}) -> String:
-	var log_entry = {
+	var log_entry:Dictionary = {
 		"Message": log_message,
 		"Timestamp": Time.get_ticks_msec(),
 		"Details": "",
