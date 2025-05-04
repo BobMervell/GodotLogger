@@ -75,7 +75,7 @@ Color-coded and bolded depending on the log level.
 
 ## 📝 License
 
-This project is released under **MIT License** — feel free to use and modify it.  
+This project is licensed under the MIT, you can use and modify freely, credit is not mandatory but really appreciated. 
 
 ---
 
