@@ -1,6 +1,6 @@
 # 📘 Godot Logger
 
-Godot Logger is a lightweight, customizable logging plugin for Godot 4.4 ( mey work but untested for later versions)  that brings structured, formatted, and configurable log output to your development workflow. 
+Godot Logger is a lightweight, customizable logging plugin for Godot 4.4 ( may work but untested for later versions)  that brings structured, formatted, and configurable log output to your development workflow. 
 
 With support for multiple log levels (Info, Debug, Warning, Error, Fatal), rich text output, it helps developers keep track of what really matters — from debugging to critical failures.
 
